@@ -39,12 +39,3 @@ $body = @{
 }
 ```
 Invoke-RestMethod -Uri "http://localhost:8000/create_image/" -Method POST -Body ($body | ConvertTo-Json) -ContentType "application/json"
-
-## using curl
-```
-curl.exe -X POST "http://localhost:8000/create_image/" -H "Content-Type: application/json" -d '{
-  "image1": "https://tainanfideliscom.s3.sa-east-1.amazonaws.com/personal_tmp/image1.png",
-  "image2": "https://tainanfideliscom.s3.sa-east-1.amazonaws.com/personal_tmp/image2.png",
-  "title": "ENSINE MELHOR COM IA"
-}'
-```
