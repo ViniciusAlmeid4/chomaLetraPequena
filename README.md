@@ -37,5 +37,6 @@ $body = @{
     image2 = "https://tainanfideliscom.s3.sa-east-1.amazonaws.com/personal_tmp/image2.png" 
     title = "ENSINE MELHOR COM IA" 
 }
-```
+
 Invoke-RestMethod -Uri "http://localhost:8000/create_image/" -Method POST -Body ($body | ConvertTo-Json) -ContentType "application/json"
+```
